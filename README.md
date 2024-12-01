@@ -1,1 +1,3 @@
 # Smart Contact Manager (SCM)
+
+The Smart Contact Manager is the contact management tools that is helps us to manages the contact in the butter way.....
