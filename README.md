@@ -43,7 +43,7 @@ SCM1.0 is a robust and feature-rich cloud-based contact management system tailor
 ## **Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/SCM1.0.git
+   git clone https://github.com/lucky001118/Smart_Contact_Manager.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -96,11 +96,6 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## **License**
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## **Acknowledgments**
 - **Spring Boot**: For the backend framework.
 - **Google and GitHub APIs**: For authentication integration.
@@ -109,4 +104,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to modify this template as per your project specifics!
