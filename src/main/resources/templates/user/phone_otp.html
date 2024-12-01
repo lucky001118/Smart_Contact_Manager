@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  validate'">
+      Profile Page
+    </title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20">
+
+
+        <!-- card that is showing contacts of users -->
+       <div class="flex justify-center flex-col items-center mt-15">
+
+        <!-- messagebox for alert here -->
+       <div data-th-replace="message:: messagebox"></div>
+
+       <div class="mt-5">
+        
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#" class="text-center">
+        <img class="rounded-t-lg" src="/images/secure_user.png" alt="" />
+    </a>
+    <div class="p-5">
+        <div class="flex flex-col justify-between p-4 leading-normal bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <h1 class="mb-3 text-2xl font-bold text-gray-700 dark:text-gray-400">Submit OTP</h1>
+            
+            <form 
+            data-th-action="@{'/submit-phone-otp'}"
+            method="post"
+            class="max-w-sm mx-auto">
+            <div class="mb-5">
+              <!-- username field -->
+              <div class="mb-3">
+                <label
+                  for="phone-otp"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >OTP</label
+                >
+                <input
+                  name="phone-otp"
+                  type="text"
+                  id="phone-otp"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            </form>
+          </div>
+    </div>
+</div>
+
+       </div>
+        
+               </div>
+      </div>
+
+      
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>
